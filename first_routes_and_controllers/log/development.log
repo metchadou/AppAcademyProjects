@@ -1,0 +1,359 @@
+  [1m[35m (26790.7ms)[0m  [1m[35mCREATE DATABASE "first_routes_and_controllers_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (8424.7ms)[0m  [1m[35mCREATE DATABASE "first_routes_and_controllers_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2021-12-14 17:37:08 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/franklin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/franklin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (63.8ms)
+Completed 200 OK in 1177ms (Views: 236.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-15 09:57:13 +0000
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?:
+
+Started GET "/" for 127.0.0.1 at 2021-12-15 10:03:46 +0000
+
+PG::ConnectionBad - FATAL:  the database system is starting up:
+
+Started POST "/__better_errors/957c32b012602cab/variables" for 127.0.0.1 at 2021-12-15 10:03:56 +0000
+Started POST "/__better_errors/957c32b012602cab/variables" for 127.0.0.1 at 2021-12-15 10:05:10 +0000
+Started POST "/__better_errors/957c32b012602cab/variables" for 127.0.0.1 at 2021-12-15 10:05:13 +0000
+Started GET "/" for ::1 at 2021-12-15 10:05:48 +0000
+
+PG::ConnectionBad - FATAL:  the database system is starting up:
+
+Started POST "/__better_errors/82c8c778a9e529ee/variables" for ::1 at 2021-12-15 10:05:53 +0000
+Started GET "/" for ::1 at 2021-12-15 10:07:44 +0000
+
+PG::ConnectionBad - FATAL:  the database system is starting up:
+
+Started POST "/__better_errors/83f789d9da4592d6/variables" for ::1 at 2021-12-15 10:07:46 +0000
+Started GET "/" for 127.0.0.1 at 2021-12-15 10:15:14 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/franklin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/franklin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (29.1ms)
+Completed 200 OK in 180ms (Views: 111.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-15 10:15:46 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/franklin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/franklin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (19.5ms)
+Completed 200 OK in 95ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-15 10:16:14 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/franklin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/franklin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (30.9ms)
+Completed 200 OK in 138ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2021-12-15 11:01:29 +0000
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/users" for ::1 at 2021-12-15 11:04:44 +0000
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started POST "/__better_errors/07577f82338481fd/variables" for ::1 at 2021-12-15 11:04:49 +0000
+Started GET "/users" for ::1 at 2021-12-15 11:08:40 +0000
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/users" for ::1 at 2021-12-15 11:12:12 +0000
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 403ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2021-12-15 11:12:26 +0000
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 362ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - UsersController#index is missing a template for this request format and variant.
+request.formats: ["text/html"]
+request.variant: []
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/c6e9aacff816033c/variables" for ::1 at 2021-12-15 11:12:30 +0000
+Started GET "/users" for ::1 at 2021-12-15 11:15:58 +0000
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 1668ms (Views: 1667.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?admin=true" for ::1 at 2021-12-15 11:20:42 +0000
+Processing by UsersController#index as */*
+  Parameters: {"admin"=>"true"}
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?premium=false" for ::1 at 2021-12-15 11:21:16 +0000
+Processing by UsersController#index as */*
+  Parameters: {"premium"=>"false"}
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?city=abidjan" for ::1 at 2021-12-15 11:21:51 +0000
+Processing by UsersController#index as */*
+  Parameters: {"city"=>"abidjan"}
+  Rendering text template
+  Rendered text template (0.2ms)
+Completed 200 OK in 93ms (Views: 92.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2021-12-15 11:27:58 +0000
+
+AbstractController::ActionNotFound - The action 'create' could not be found for UsersController:
+
+Started POST "/users" for ::1 at 2021-12-15 11:29:39 +0000
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"kym", "lastname"=>"adou", "age"=>"0"}
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for ::1 at 2021-12-15 11:33:06 +0000
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started GET "/users/2" for ::1 at 2021-12-15 11:35:10 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?some_category[a_key]=another+value&some_category[another_key][a]=a+value" for ::1 at 2021-12-15 11:40:49 +0000
+Processing by UsersController#index as */*
+  Parameters: {"some_category"=>{"a_key"=>"another value", "another_key"=>{"a"=>"a value"}}}
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2021-12-15 11:44:55 +0000
+Processing by UsersController#create as */*
+  Parameters: {"kym"=>{"name"=>"kym", "lastname"=>"adou"}, "age"=>"0"}
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2021-12-15 11:46:47 +0000
+Processing by UsersController#create as */*
+  Parameters: {"kym"=>{"name"=>"kym", "lastname"=>"adou"}, "momo"=>{"names"=>{"lastname"=>"adou", "nickname"=>"tico"}}}
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (7347.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (767.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (172.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2711202859307440470)[0m
+  ↳ bin/rails:9
+  [1m[35m (124.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20211215135714)
+  [1m[35m (17.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1115.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying NOT NULL, "email" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20211215135714_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (99.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211215135714"]]
+  ↳ bin/rails:9
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (19.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (128.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-15 14:01:13.324770"], ["updated_at", "2021-12-15 14:01:13.324770"]]
+  ↳ bin/rails:9
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(2711202859307440470)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (70.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "momo"], ["email", "momo@mail.com"], ["created_at", "2021-12-15 14:07:21.190831"], ["updated_at", "2021-12-15 14:07:21.190831"]]
+  [1m[35m (91.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "kymo"], ["email", "kymo@mail.com"], ["created_at", "2021-12-15 14:08:03.589137"], ["updated_at", "2021-12-15 14:08:03.589137"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (47.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (22.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/users" for ::1 at 2021-12-15 14:17:30 +0000
+  [1m[35m (150.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/franklin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as */*
+  [1m[36mUser Load (105.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3
+Completed 200 OK in 1185ms (Views: 600.2ms | ActiveRecord: 133.3ms)
+
+
+Started POST "/users" for ::1 at 2021-12-15 14:32:01 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"willy", "email"=>"willy@mail.com"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Create (78.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "willy"], ["email", "willy@mail.com"], ["created_at", "2021-12-15 14:32:06.569649"], ["updated_at", "2021-12-15 14:32:06.569649"]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (1001.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 200 OK in 1864ms (Views: 46.4ms | ActiveRecord: 1565.7ms)
+
+
+Started POST "/users" for ::1 at 2021-12-15 14:36:21 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"jb"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (47.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 422 Unprocessable Entity in 8129ms (ActiveRecord: 48.4ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Email can't be blank:
+  app/controllers/users_controller.rb:8:in `create'
+
+Started POST "/users" for ::1 at 2021-12-15 14:42:06 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"jb"}}
+  [1m[35m (14.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (3.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 422 Unprocessable Entity in 526ms (ActiveRecord: 268.6ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Email can't be blank:
+  app/controllers/users_controller.rb:8:in `create'
+
+Started POST "/users" for ::1 at 2021-12-15 14:42:20 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"jb"}}
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 422 Unprocessable Entity in 177ms (Views: 13.3ms | ActiveRecord: 19.2ms)
+
+
+Started POST "/__better_errors/c6e9aacff816033c/variables" for ::1 at 2021-12-15 14:54:59 +0000
+Started GET "/users" for ::1 at 2021-12-15 14:55:29 +0000
+Processing by UsersController#index as */*
+  [1m[36mUser Load (300.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3
+Completed 200 OK in 971ms (Views: 320.8ms | ActiveRecord: 632.7ms)
+
+
+Started GET "/users/2" for ::1 at 2021-12-15 14:55:57 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+Completed 200 OK in 286ms (Views: 2.0ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/users/1" for ::1 at 2021-12-15 14:56:19 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+Completed 200 OK in 40ms (Views: 1.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for ::1 at 2021-12-15 14:56:25 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+Completed 200 OK in 21ms (Views: 1.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/4" for ::1 at 2021-12-15 14:56:30 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+Completed 404 Not Found in 135ms (ActiveRecord: 1.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=4:
+  app/controllers/users_controller.rb:16:in `show'
+
+Started PUT "/users/3" for ::1 at 2021-12-15 15:12:22 +0000
+Processing by UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"jb", "email"=>"jb@mail.com"}, "id"=>"3"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (19.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Update (96.8ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "email" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["name", "jb"], ["email", "jb@mail.com"], ["updated_at", "2021-12-15 15:12:22.760150"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (81.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 312ms (Views: 2.0ms | ActiveRecord: 201.2ms)
+
+
+Started GET "/users" for ::1 at 2021-12-15 15:13:28 +0000
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/users/3" for ::1 at 2021-12-15 15:18:53 +0000
+Processing by UsersController#destroy as */*
+  Parameters: {"user"=>{"name"=>"jb", "email"=>"jb@mail.com"}, "id"=>"3"}
+  [1m[36mUser Load (26.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28
+  [1m[36mUser Destroy (51.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (57.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28
+Completed 200 OK in 483ms (Views: 2.3ms | ActiveRecord: 171.3ms)
+
+
+Started GET "/users" for ::1 at 2021-12-15 15:20:53 +0000
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3
+Completed 200 OK in 49ms (Views: 21.9ms | ActiveRecord: 14.5ms)
+
+
+Started POST "/users" for ::1 at 2021-12-15 15:25:25 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"jb", "email"=>"jb@mail.com"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Create (118.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "jb"], ["email", "jb@mail.com"], ["created_at", "2021-12-15 15:25:26.191042"], ["updated_at", "2021-12-15 15:25:26.191042"]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 200 OK in 212ms (Views: 2.7ms | ActiveRecord: 134.0ms)
+
+
+Started GET "/users" for ::1 at 2021-12-15 15:25:54 +0000
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 1.2ms)
+
+

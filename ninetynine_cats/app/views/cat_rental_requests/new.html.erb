@@ -1,0 +1,26 @@
+<a href="<%= cat_url(@cat) %>">Back</a>
+
+<h1>Cat rental request</h1>
+
+<form action="<%= cat_rental_requests_url %>" method="POST">
+  <label for="cats">Cat</label>
+  <select name="cat_rental_request[cat_id]" id="cats">
+    <% @cats.each do |cat| %>
+      <option value="<%= cat.id %>" <%= "selected" if @cat.name.downcase == cat.name.downcase %>><%= cat.name %></option>
+    <% end %>
+  </select>
+
+  <br>
+
+  <label for="start_date">Start date</label>
+  <input type="date" id="start_date" name="cat_rental_request[start_date]" min="<%= Date.today %>">
+
+  <br>
+
+  <label for="end_date">End date</label>
+  <input type="date" id="end_date" name="cat_rental_request[end_date]" min="<%= Date.today %>">
+
+  <br>
+
+  <input type="submit" value="make request">
+</form>
