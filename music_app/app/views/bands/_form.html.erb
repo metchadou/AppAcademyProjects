@@ -1,0 +1,29 @@
+<% if band.persisted? %>
+  <% action_url = band_url(band) %>
+  <% http_method = "patch" %>
+  <% submit_msg = "update band" %>
+<% else %>
+  <% action_url = bands_url %>
+  <% method = "post" %>
+  <% submit_msg = "create band" %>
+<% end %>
+
+<%= render 'shared/errors' %>
+
+<form action="<%= action_url %>" method="POST">
+  <%= auth_form %>
+  <%= form_method(method) %>
+  <div class="input-group">
+    <label for="band_name">Band name:</label>
+    <input type="text"
+         id="band_name"
+         name="band[name]"
+         value="<%= band.name %>">
+  </div>
+
+  <div class="bottom-btns-container">
+    <%= link_to 'cancel', bands_url, class: "btn" %>
+    <input type="submit" value="<%= submit_msg %>" class="btn">
+  </div>
+
+</form>

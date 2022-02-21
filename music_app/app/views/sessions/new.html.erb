@@ -1,0 +1,30 @@
+<h2>Sign in</h2>
+
+<%= render 'shared/errors' %>
+
+<div class="form-container">
+       <form action="<%= session_url %>" method="POST">
+              <%= auth_form %>
+
+              <div class="input-group">
+                     <label for="user_email">Email</label>
+                     <input type="text"
+                     id="user_email"
+                     name="user[email]">
+              </div>
+
+              <div class="input-group">
+                     <label for="user_password">Password</label>
+                     <input type="password"
+                     id="user_password"
+                     name="user[password]">
+              </div>
+              
+              <div class="bottom-btns-container input-group">
+                     <input type="submit"
+                     value="sign in"
+                     class="btn">
+              </div>
+       </form>
+
+</div>

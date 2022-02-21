@@ -1,0 +1,26 @@
+<h2><%= @band.name %></h2>
+
+<%= render 'shared/success' %>
+
+<div class="table-container">
+  <h3 class="table-title">Albums</h3>
+  <table>
+    <% @band.albums.each do |album| %>
+      <tr>
+        <td>
+          <a href="<%= album_url(album) %>"><%= album.title %></a>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<div class="bottom-btns-container">
+  <%= link_to 'back', bands_url, class: "btn" %>
+
+  <%= link_to 'edit', edit_band_url(@band), class: "btn" %>
+
+  <%= button_to 'delete', band_url(@band), method: :delete, class: "btn", form_class: 'form-btn' %>
+
+  <%= link_to 'new album', new_band_album_url(@band), class: "btn" %>
+</div>

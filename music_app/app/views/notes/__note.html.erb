@@ -1,0 +1,11 @@
+<article class="notes-container">
+  <em><%= note.user.email %></em>
+  <p>
+    <%= note.content %>
+  </p>
+  
+  <% if note.user_id == current_user.id %>
+    <%= button_to 'delete note', note_url(note), method: :delete, class: "btn", form_class: "form-btn" %>
+  <% end %>
+
+</article>

@@ -1,0 +1,155 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-weight: medium;
+
+  width: 80%;
+  margin: 0 auto;
+
+  color: #290628;
+}
+
+.header {
+  border-bottom: #dadce0 solid thin;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo a{
+  font-family: 'Boogaloo', cursive;
+  font-size: 80px;
+}
+
+.header-list {
+  display: flex;
+  padding: 5px;
+}
+
+.header-list li {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.btn {
+  display: block;
+  color: white;
+  border-radius: 7.5%;
+  background: #3a0086;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.btn:hover {
+  background: #1b003d;
+}
+
+.btn-login, .btn-logout {
+  padding: 15px;
+  border: solid thin #3a0086;
+  background: #3a00860a;
+  color: #3a0086;
+}
+
+.btn-login:hover, .btn-logout:hover {
+  background: #3a00861f;
+}
+
+.main-content {
+  padding: 25px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
+
+.table-container, .form-container {
+  width: 50%;
+  margin: 25px auto;
+  font-size: 25px;
+}
+
+.lyrics-container {
+  margin: 25px 0px;
+}
+
+table {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+table a {
+  color: #3a0086;
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
+.table-title {
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: solid medium #290628;;
+}
+
+tr {
+  height: 35px;
+  vertical-align: middle;
+}
+
+.bottom-btns-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form:not(.form-btn) {
+  width: 80%;
+  margin: 0 auto;
+}
+
+label, input {
+  display: block;
+}
+
+input[type=radio], .radio-label {
+  display: inline;
+}
+
+label{
+  padding-bottom: 5px;
+}
+
+input[type=text], input[type=password], input[type=number], select, textarea {
+  border: thin solid black;
+  width: 100%;
+  padding: 5px;
+}
+
+.input-group {
+  padding: 10px;
+}
+
+.errors, .success{
+  margin: 10px;
+  text-align: center;
+}
+
+.errors {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+pre {
+  overflow: auto;
+  font-size: 14px;
+}

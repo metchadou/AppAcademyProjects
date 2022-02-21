@@ -1,0 +1,9 @@
+<% if flash[:success] %>
+  <div class="success">
+    <% flash[:success].each do |success| %>
+      <em>
+        <%= success %>
+      </em>
+    <% end %>
+  </div>
+<% end %>

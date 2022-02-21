@@ -1,0 +1,25 @@
+<h2><%= @track.title %></h2>
+
+<%= render 'shared/success' %>
+
+<div class="table-container">
+  <h3 class="table-title">Lyrics</h3>
+  <p class="lyrics-container"><%= ugly_lyrics(@track.lyrics) %></p>
+
+  <div class="bottom-btns-container">
+   
+    <%= link_to "back", album_url(@track.album), class: 'btn' %>
+
+    <%= link_to 'edit', edit_track_url(@track), class: 'btn' %>
+
+    <%= button_to 'delete', track_url(@track), method: :delete, class: 'btn', form_class: 'form-btn' %>
+  </div>
+
+  <h3>Notes</h3>
+
+  <% @track.notes.each do |note| %>
+    <%= render 'notes/_note.html.erb', note: note %>
+  <% end %>
+
+  <%= render 'notes/_form.html.erb', track: @track %>
+</div>

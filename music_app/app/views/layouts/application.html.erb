@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'reset'%>
+    <%= stylesheet_link_tag 'custom'%>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="header-nav">
+        <h1 class="header-logo">
+          <%= link_to 'Music App', bands_url %>
+        </h1>
+        <ul class="header-list">
+          <% if logged_in? %>
+            <li>
+              Logged in as: <%= current_user.email %>
+            </li>
+            <li>
+              <%= button_to "LOGOUT", session_url, method: :delete, class: "btn btn-logout" %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to 'LOG IN', new_session_url, class: "btn btn-login" %>
+            </li>
+            <li>
+              <%= link_to 'SIGN UP', new_user_url, class: "btn btn-signup" %>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
+    <div class="main-content">
+      <%= yield %>
+    </div>
+  </body>
+</html>

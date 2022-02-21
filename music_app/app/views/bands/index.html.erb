@@ -1,0 +1,19 @@
+<%= render 'shared/errors' %>
+<%= render 'shared/success' %>
+
+<div class="table-container">
+  <h3 class="table-title">Bands</h3>
+  <table>
+    <% @bands.each do |band| %>
+      <tr>
+        <td>
+          <a href="<%= band_url(band) %>"><%= band.name %></a>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+  <div class="bottom-btns-container">
+    <%= link_to 'new band', new_band_url, class: "btn" %>
+  </div>
+</div>
