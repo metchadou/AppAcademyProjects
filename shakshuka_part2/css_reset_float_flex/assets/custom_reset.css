@@ -1,0 +1,48 @@
+html, body, header, img, nav, ul, li, a, aside, section, h1, h2, figure, figcaption, p, ol, form, label, footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font-size: 100%;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+
+  background: transparent;
+}
+
+li {
+  list-style: none;
+}
+
+body{
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+input[type="radio"], select, input[type="submit"] {
+  cursor: pointer;
+  outline: none;
+}
+
+header, nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+header > img {
+}
+
+.cf::after {
+  content: "";
+  display: block;
+  clear: both;
+}
