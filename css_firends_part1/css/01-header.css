@@ -1,0 +1,45 @@
+/* PHASE 1: Header */
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  background: #eeeeee;
+}
+
+.header {
+  background: red;
+  position: relative;
+  z-index: 1;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  min-width: 900px;
+  margin: 0 auto;
+  color: white;
+}
+
+.header-nav a {
+  display: block;
+  padding: 12px;
+  border: white solid thin;
+}
+
+.header-nav li:hover {
+  background: black;
+}
+
+.header-nav li:hover .badge {
+  background: red;
+}
+
+.header-logo {
+  font-weight: bold;
+}
+
+.header-list {
+  display: flex;
+}
