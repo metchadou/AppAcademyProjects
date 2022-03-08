@@ -1,0 +1,30 @@
+<p><%= @comment.content %></p>
+
+<em>Upvotes: <%= @comment.total_upvotes %></em>
+<em>Downvotes: <%= @comment.total_downvotes %></em>
+
+<%= button_to 'upvote', upvote_comment_url, method: :post %>
+<%= button_to 'downvote', downvote_comment_url, method: :post %>
+
+<b>Reply to this comment:</b>
+
+<form action="<%= comments_url %>" method="POST">
+  <%= auth_form %>
+
+  <input type="hidden"
+         name="comment[post_id]"
+         value="<%= @comment.post_id %>">
+
+  <input type="hidden"
+         name="comment[parent_comment_id]"
+         value="<%= @comment.id %>">
+
+  <label for="comment_content">Content:</label>
+  <br>
+  <textarea name="comment[content]"
+            id="comment_content"></textarea>
+  
+  <br>
+  
+  <input type="submit">
+</form>

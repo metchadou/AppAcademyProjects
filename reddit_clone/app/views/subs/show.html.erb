@@ -1,0 +1,19 @@
+<h1><%= @sub.title %></h1>
+
+<h3>Description</h3>
+<p><%= @sub.description %></p>
+
+<%= link_to 'Make New Post', new_post_url %>
+
+<ul>
+  <% @posts_by_votes.each do |post| %>
+    <li>
+      (<%= post.total_upvotes %> | <%=  post.total_downvotes %>)
+      <%= link_to "#{post.title}", post_url(post) %>
+    </li>
+  <% end %>
+</ul>
+
+<% if logged_in? && current_user.sub_moderator?(@sub.id) %>
+  <%= link_to 'Edit sub', edit_sub_url(@sub) %>
+<% end %>

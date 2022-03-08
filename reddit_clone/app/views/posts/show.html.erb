@@ -1,0 +1,51 @@
+<h1><%= @post.title %> by <%= @post.author.username %></h1>
+
+<em>Upvotes: <%= @post.total_upvotes %></em>
+<em>Downvotes: <%= @post.total_downvotes %></em>
+
+<h2>Content:</h2>
+<p><%= @post.content %></p>
+
+<%= button_to 'upvote', upvote_post_url, method: :post %>
+<%= button_to 'downvote', downvote_post_url, method: :post %>
+
+<h2>Subs:</h2>
+<ul>
+  <% @post.subs.each do |sub| %>
+    <li><%= link_to "#{sub.title}", sub_url(sub) %></li>
+  <% end %>
+</ul>
+
+<h2>Comments:</h2>
+<%= link_to 'Comment on this post', new_post_comment_url(@post) %>
+<ul>
+  <% # Comments with N+1 Queries %>
+  <% if false %>
+    <% @post.top_level_comments.each do |comment| %>
+      <%= render "posts/comment", comment: comment %>
+    <% end %>
+  <% end %>
+
+  <% # Comments without N+1 Queries %>
+  <% if false %>
+    <% @all_comments.each do |comment| %>
+      <% next if comment.parent_comment_id %>
+      <%= render 'posts/comment', comment: comment %>
+    <% end %>
+  <% end %>
+
+  <% # Faster comments %>
+  <% @top_level_comments_by_votes.each do |comment| %>
+    <%= render(
+      "posts/comment",
+      comment: comment,
+      comments_by_parent_id: @comments_by_parent_id) %>
+  <% end %>
+  
+</ul>
+
+
+
+<br>
+
+<%= link_to 'Edit', edit_post_url(@post) %>

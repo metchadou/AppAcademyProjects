@@ -1,0 +1,42 @@
+<% if false %>
+  <li>
+    <%= link_to "#{comment.content}", comment_url(comment) %>
+    
+    <ul>
+      <% comment.child_comments.each do |child_cmnt| %>
+        <%= render "posts/comment", comment: child_cmnt %>
+      <% end %>  
+    </ul>
+  </li>
+<% end %>
+
+<% if false %>
+  <li>
+    <%= link_to "#{comment.content}", comment_url(comment) %>
+    <em> by <%= comment.author.username %> on <%= comment.created_at %></em>
+    
+    <ul>
+      <% @all_comments.each do |child_cmnt| %>
+        <% if child_cmnt.parent_comment_id == comment.id %>
+          <%= render "posts/comment", comment: child_cmnt %>
+        <% end %>
+      <% end %>  
+    </ul>
+  </li>
+<% end %>
+
+<li>
+  (<%= comment.total_upvotes %> | <%=  comment.total_downvotes %>)
+  <%= link_to "#{comment.content}", comment_url(comment) %>
+
+  <ul>
+    <% child_comments_by_votes = comments_by_parent_id[comment.id].sort_by {|cmnt| cmnt.total_upvotes}.reverse %>
+
+    <% child_comments_by_votes.each do |child_cmnt| %>
+        <%= render(
+          "posts/comment",
+          comment: child_cmnt,
+          comments_by_parent_id: comments_by_parent_id) %>
+    <% end %>
+  </ul>
+</li>
