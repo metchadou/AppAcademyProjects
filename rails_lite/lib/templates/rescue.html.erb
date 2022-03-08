@@ -1,0 +1,25 @@
+<head>
+  <style>
+    body {
+      padding: 0;
+      margin: 0:
+      font-family: sans-serif;
+    }
+
+    .header {
+      color: white;
+      background-color: red;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 class="header"><%= e.class %>: <%= e.message %></h2>
+
+  <h3>Stack trace</h3>
+  <% e.backtrace.each do |stack_line| %>
+    <%= stack_line %>
+    <br>
+  <% end %>
+</body>
